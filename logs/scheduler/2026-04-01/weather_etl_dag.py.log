@@ -1,0 +1,174 @@
+[2026-04-01T08:07:11.747+0000] {processor.py:161} INFO - Started process (PID=24) to work on /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:07:11.754+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/weather_etl_dag.py for tasks to queue
+[2026-04-01T08:07:11.784+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:07:11.783+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:07:11.794+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:07:11.793+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/weather_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_etl_dag.py", line 5, in <module>
+    from scripts.extract import extract_weather
+ModuleNotFoundError: No module named 'scripts.extract'
+[2026-04-01T08:07:11.795+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:07:11.916+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/weather_etl_dag.py took 0.210 seconds
+[2026-04-01T08:07:42.161+0000] {processor.py:161} INFO - Started process (PID=25) to work on /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:07:42.162+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/weather_etl_dag.py for tasks to queue
+[2026-04-01T08:07:42.167+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:07:42.164+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:07:42.178+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:07:42.171+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/weather_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_etl_dag.py", line 5, in <module>
+    from scripts.extract import extract_weather
+ModuleNotFoundError: No module named 'scripts.extract'
+[2026-04-01T08:07:42.179+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:07:42.206+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/weather_etl_dag.py took 0.067 seconds
+[2026-04-01T08:08:12.289+0000] {processor.py:161} INFO - Started process (PID=26) to work on /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:08:12.289+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/weather_etl_dag.py for tasks to queue
+[2026-04-01T08:08:12.291+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:08:12.291+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:08:12.302+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:08:12.298+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/weather_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_etl_dag.py", line 5, in <module>
+    from scripts.extract import extract_weather
+ModuleNotFoundError: No module named 'scripts.extract'
+[2026-04-01T08:08:12.303+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:08:12.325+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/weather_etl_dag.py took 0.042 seconds
+[2026-04-01T08:08:42.501+0000] {processor.py:161} INFO - Started process (PID=27) to work on /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:08:42.501+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/weather_etl_dag.py for tasks to queue
+[2026-04-01T08:08:42.506+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:08:42.505+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:08:42.511+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:08:42.510+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/weather_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_etl_dag.py", line 5, in <module>
+    from scripts.extract import extract_weather
+ModuleNotFoundError: No module named 'scripts.extract'
+[2026-04-01T08:08:42.512+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:08:42.553+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/weather_etl_dag.py took 0.072 seconds
+[2026-04-01T08:09:12.599+0000] {processor.py:161} INFO - Started process (PID=28) to work on /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:09:12.600+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/weather_etl_dag.py for tasks to queue
+[2026-04-01T08:09:12.601+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:09:12.601+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:09:12.605+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:09:12.604+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/weather_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_etl_dag.py", line 5, in <module>
+    from scripts.extract import extract_weather
+ModuleNotFoundError: No module named 'scripts.extract'
+[2026-04-01T08:09:12.606+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:09:12.624+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/weather_etl_dag.py took 0.032 seconds
+[2026-04-01T08:09:42.719+0000] {processor.py:161} INFO - Started process (PID=29) to work on /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:09:42.720+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/weather_etl_dag.py for tasks to queue
+[2026-04-01T08:09:42.721+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:09:42.721+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:09:42.724+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:09:42.723+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/weather_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_etl_dag.py", line 5, in <module>
+    from scripts.extract import extract_weather
+ModuleNotFoundError: No module named 'scripts.extract'
+[2026-04-01T08:09:42.725+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:09:42.751+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/weather_etl_dag.py took 0.038 seconds
+[2026-04-01T08:10:11.839+0000] {processor.py:161} INFO - Started process (PID=30) to work on /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:10:11.840+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/weather_etl_dag.py for tasks to queue
+[2026-04-01T08:10:11.841+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:10:11.841+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:10:14.510+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:10:14.493+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/weather_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_etl_dag.py", line 41, in <module>
+    python_callable=extract_task_func
+                    ^^^^^^^^^^^^^^^^^
+NameError: name 'extract_task_func' is not defined
+[2026-04-01T08:10:14.541+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:10:14.690+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/weather_etl_dag.py took 2.855 seconds
+[2026-04-01T08:12:54.495+0000] {processor.py:161} INFO - Started process (PID=24) to work on /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:12:54.508+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/weather_etl_dag.py for tasks to queue
+[2026-04-01T08:12:54.511+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:12:54.510+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:13:01.363+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:13:01.345+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/weather_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_etl_dag.py", line 41, in <module>
+    python_callable=extract_task_func
+                    ^^^^^^^^^^^^^^^^^
+NameError: name 'extract_task_func' is not defined
+[2026-04-01T08:13:01.376+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:13:01.496+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/weather_etl_dag.py took 7.014 seconds
+[2026-04-01T08:13:31.722+0000] {processor.py:161} INFO - Started process (PID=26) to work on /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:13:31.722+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/weather_etl_dag.py for tasks to queue
+[2026-04-01T08:13:31.726+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:13:31.724+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:13:32.210+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:13:32.195+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/weather_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_etl_dag.py", line 41, in <module>
+    python_callable=extract_task_func
+                    ^^^^^^^^^^^^^^^^^
+NameError: name 'extract_task_func' is not defined
+[2026-04-01T08:13:32.217+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:13:32.237+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/weather_etl_dag.py took 0.528 seconds
+[2026-04-01T08:14:02.372+0000] {processor.py:161} INFO - Started process (PID=28) to work on /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:14:02.372+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/weather_etl_dag.py for tasks to queue
+[2026-04-01T08:14:02.374+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:14:02.373+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:14:02.841+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:14:02.836+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/weather_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_etl_dag.py", line 41, in <module>
+    python_callable=extract_task_func
+                    ^^^^^^^^^^^^^^^^^
+NameError: name 'extract_task_func' is not defined
+[2026-04-01T08:14:02.845+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:14:02.863+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/weather_etl_dag.py took 0.496 seconds
+[2026-04-01T08:14:32.994+0000] {processor.py:161} INFO - Started process (PID=30) to work on /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:14:32.995+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/weather_etl_dag.py for tasks to queue
+[2026-04-01T08:14:32.997+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:14:32.996+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:14:33.481+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:14:33.476+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/weather_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_etl_dag.py", line 41, in <module>
+    python_callable=extract_task_func
+                    ^^^^^^^^^^^^^^^^^
+NameError: name 'extract_task_func' is not defined
+[2026-04-01T08:14:33.486+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:14:33.507+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/weather_etl_dag.py took 0.520 seconds
+[2026-04-01T08:15:03.606+0000] {processor.py:161} INFO - Started process (PID=32) to work on /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:15:03.606+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/weather_etl_dag.py for tasks to queue
+[2026-04-01T08:15:03.608+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:15:03.608+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:15:04.518+0000] {logging_mixin.py:188} INFO - [2026-04-01T08:15:04.513+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/weather_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_etl_dag.py", line 41, in <module>
+    python_callable=extract_task_func
+                    ^^^^^^^^^^^^^^^^^
+NameError: name 'extract_task_func' is not defined
+[2026-04-01T08:15:04.523+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_etl_dag.py
+[2026-04-01T08:15:04.539+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/weather_etl_dag.py took 0.940 seconds
