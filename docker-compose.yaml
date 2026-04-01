@@ -1,59 +1,99 @@
 version: '3.8'
 
+x-airflow-common: &airflow-common
+  image: apache/airflow:2.8.1
+  environment: &airflow-env
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__WEBSERVER__SECRET_KEY: "mysecretkey"
+  volumes:
+    - ./dags:/opt/airflow/dags
+    - ./scripts:/opt/airflow/scripts
+    - ./requirements.txt:/requirements.txt
+  user: "${AIRFLOW_UID:-50000}:0"
+  depends_on: &airflow-common-depends-on
+    postgres:
+      condition: service_healthy
+
 services:
+
+  # -------------------------
+  # POSTGRES DATABASE
+  # -------------------------
   postgres:
     image: postgres:13
+    container_name: airflow-postgres
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
       POSTGRES_DB: airflow
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 5s
+      retries: 5
+      start_period: 5s
+    restart: always
 
-  airflow-webserver:
-    image: apache/airflow:2.8.1
-    depends_on:
-      - postgres
-    environment:
-      AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
-    volumes:
-      - ./dags:/opt/airflow/dags
-      - ./scripts:/opt/airflow/scripts
-      - ./requirements.txt:/requirements.txt
-    ports:
-      - "8080:8080"
+  # -------------------------
+  # AIRFLOW INIT (IMPORTANT)
+  # -------------------------
+  airflow-init:
+    <<: *airflow-common
+    container_name: airflow-init
+    entrypoint: /bin/bash
     command: >
-      bash -c "
+      -c "
       pip install -r /requirements.txt &&
       airflow db init &&
       airflow users create \
         --username admin \
         --password admin \
-        --firstname admin \
-        --lastname user \
+        --firstname Admin \
+        --lastname User \
         --role Admin \
-        --email admin@example.com || true &&
-      airflow webserver
+        --email admin@example.com || true
       "
-
-  airflow-scheduler:
-    image: apache/airflow:2.8.1
     depends_on:
-      - airflow-webserver
-    environment:
-      AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-    volumes:
-      - ./dags:/opt/airflow/dags
-      - ./scripts:/opt/airflow/scripts
-      - ./requirements.txt:/requirements.txt
-    command: >
-      bash -c "
-      pip install -r /requirements.txt &&
-      airflow scheduler
-      "
+      postgres:
+        condition: service_healthy
 
+  # -------------------------
+  # WEB SERVER
+  # -------------------------
+  airflow-webserver:
+    <<: *airflow-common
+    container_name: airflow-webserver
+    command: webserver
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      retries: 5
+    restart: always
+    depends_on:
+      <<: *airflow-common-depends-on
+      airflow-init:
+        condition: service_completed_successfully
+
+  # -------------------------
+  # SCHEDULER
+  # -------------------------
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: airflow-scheduler
+    command: scheduler
+    restart: always
+    depends_on:
+      <<: *airflow-common-depends-on
+      airflow-init:
+        condition: service_completed_successfully
+
+# -------------------------
+# VOLUMES
+# -------------------------
 volumes:
   postgres-db-volume:
