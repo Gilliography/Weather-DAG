@@ -222,7 +222,7 @@ This project demonstrates how to build a complete ETL pipeline using modern data
 
 ## 📌 Author
 
-**Your Name Here**
+**Gilbert Kiprotich**
 
 ---
 
