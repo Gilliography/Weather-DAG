@@ -1,7 +1,8 @@
-import pandas as pd
+from sqlalchemy import create_engine
 
-def load_weather(input_path):
-    """Load the processed CSV (currently just prints it)."""
-    df = pd.read_csv(input_path)
-    print("Final Weather Data:")
-    print(df.head())
+
+def load_weather(df):
+    engine = create_engine(
+        "postgresql+psycopg2://airflow:airflow@postgres:5432/airflow"
+    )
+    df.to_sql("weather_data", engine, if_exists="replace", index=False)

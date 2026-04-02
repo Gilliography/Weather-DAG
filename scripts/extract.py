@@ -1,13 +1,8 @@
 import requests
-import json
 
-def extract_weather(api_url, output_path):
-    """Extract weather data from API and save as JSON."""
-    response = requests.get(api_url)
+
+def extract_weather():
+    url = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m"
+    response = requests.get(url)
     response.raise_for_status()
-    data = response.json()
-
-    with open(output_path, "w") as f:
-        json.dump(data, f)
-
-    return output_path
+    return response.json()
