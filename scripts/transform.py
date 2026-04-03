@@ -2,8 +2,8 @@ import pandas as pd
 
 
 def transform_weather(data):
-    df = pd.DataFrame({
-        "time": data["hourly"]["time"],
-        "temperature": data["hourly"]["temperature_2m"]
-    })
+    hourly = data["hourly"]
+
+    df = pd.DataFrame(hourly)
+
     return df
