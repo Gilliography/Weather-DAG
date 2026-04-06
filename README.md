@@ -195,6 +195,42 @@ https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=tem
 * Check port 8080 is running
 * Use correct Codespaces URL
 
+---
+
+## ☁️ AWS Deployment (EC2)
+
+### 1. Launch EC2 Instance
+
+* Ubuntu 22.04
+* t2.medium recommended
+
+### 2. Install Docker
+
+```bash
+sudo apt update
+sudo apt install docker.io docker-compose -y
+sudo usermod -aG docker $USER
+```
+
+### 3. Clone Repository
+
+```bash
+git clone <your-repo-url>
+cd weather-etl
+```
+
+### 4. Run Services
+
+```bash
+docker-compose up -d --build
+```
+
+### 5. Open Ports (Security Group)
+
+* 8080 (Airflow)
+* 8501 (Streamlit)
+
+
 ### Invalid login
 
 * Ensure user exists:
@@ -229,3 +265,6 @@ This project demonstrates how to build a complete ETL pipeline using modern data
 ## ⭐ If you found this helpful
 
 Give the repo a star and share 🚀
+
+
+
