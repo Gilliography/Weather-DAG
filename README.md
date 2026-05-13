@@ -265,6 +265,3 @@ This project demonstrates how to build a complete ETL pipeline using modern data
 ## ⭐ If you found this helpful
 
 Give the repo a star and share 🚀
-
-
-
